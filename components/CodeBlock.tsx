@@ -73,7 +73,7 @@ export const CodeBlock = ({
     }
   }, [resolvedTheme]);
 
-  // If the code is a slice file, add the mode to the first line if the current
+  // If the code is a slice file, add a mode declaration to the first line if 'Slice1' is the current mode.
   if (language?.toLowerCase() === 'slice' && addMode && mode == Mode.Slice1) {
     const modeLines = [`mode = ${mode}`, '\n'];
     children = modeLines.join('\n').concat(children);
